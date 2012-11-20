@@ -95,9 +95,7 @@ The following features are currently unsupported in this version of the OpenTok 
 
 * The `[OTPublisher publishAudio]` and `[OTPublisher publishVideo]` messages
 * The `[OTSubscriber subscribeToAudio]` and `[OTSubscriber subscribeToVideo]` messages
-* The mute button in the Publisher and Subscriber video user interface
 * You cannot target the iOS Simulator. Build and deploy to a supported iOS device.
-* When debugging on a device running iOS 6, there are some warnings when you rotate the device. Please ignore these.
 
 In XCode, you need to remove armv7s from the Valid Architectures section of the Build Settings for your project.
 
