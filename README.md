@@ -1,29 +1,85 @@
 OpenTok WebRTC for iOS SDK
 ==========================
 
-This package contains what you need to get you started using the OpenTok WebRTC for iOS SDK.
-
-The OpenTok WebRTC for iOS SDK lets you use OpenTok video sessions in apps you build for iPad, iPhone, and iPod touch devices.
-This means you can use OpenTok video sessions that connect iOS users with each other and with web clients that use the OpenTok
-WebRTC library for web, available at [OpenTok labs](http://labs.opentok.com).
+This SDK lets you use OpenTok on WebRTC video sessions in apps you build for iPad, iPhone, and iPod touch devices.
+This means you can use OpenTok video sessions across iOS devices AND web clients that use OpenTok on
+WebRTC. For details about using this SDK with web clients, see the
+[JavaScript documentation](http://www.tokbox.com/opentok/api/documentation/v2) at the TokBox website.
 
 Using the OpenTok WebRTC for iOS SDK
 ------------------------------------
 
-The OpenTok WebRTC for iOS SDK is available at the [webrtc branch](https://github.com/opentok/opentok-ios-sdk/tree/webrtc) of
-the opentok-ios-sdk project at github.
+[Reference Documentation for the OpenTok iOS SDK](http://www.tokbox.com/opentok/ios/docs/index.html)
 
-Documentation for the OpenTok iOS SDK is available here:
+There are two important differences to keep in mind when working with the OpenTok WebRTC for iOS SDK (compared with
+the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the OpenTok iOS SDK):
 
-<http://www.tokbox.com/opentok/ios/docs/index.html>
+*  You must use a [peer-to-peer streaming](http://www.tokbox.com/opentok/api/tools/js/documentation/overview/peer_to_peer.html)
+   enabled OpenTok Session. You can enable p2p when creating a session using the Project Tools on your
+   [Developer Dashboard](https://dashboard.tokbox.com/projects) or enable it for any Session created with
+   our supported [server-side libraries](http://www.tokbox.com/opentok/api/tools/documentation/api/server_side_libraries.html).
 
-The most important difference in using the OpenTok WebRTC for iOS SDK (compared with the non-WebRTC version of the
-OpenTok iOS SDK) is that you must use an OpenTok session that supports peer-to-peer streaming. For example, in the
-[OpenTok Session and Token Generator page](http://www.tokbox.com/opentok/api/tools/generator),
-select "Peer-to-Peer Enabled" as an Advanced Option when creating a session. You must also specify
-when generating a session using the
-[OpenTok server-side libraries](http://www.tokbox.com/opentok/api/tools/documentation/api/server_side_libraries.html).
-(Use the OpenTok Session and Token Generator page for test apps only.)
+   Peer-to-peer streaming helps reduce latency by letting the media stream skip a hop to an external server,
+   resulting in better performance. A few limitations introduced by this technique are discussed below.
+
+*  At this time you cannot run your application in the iOS Simulator, just run it on your device for testing. We will
+   be addressing this in a future release.
+
+Supported devices
+-----------------
+
+The OpenTok WebRTC for iOS SDK is supported on the following devices:
+
+* iPhone 4S / 5
+* iPad 2 / 3 / 4 / mini
+
+The OpenTok WebRTC for iOS SDK is supported on wifi connections.
+
+OpenTokHello Sample App
+--------------------
+
+You can test the OpenTok WebRTC for iOS SDK using the
+[OpenTok-iOS-Hello-World sample](https://github.com/opentok/OpenTok-iOS-Hello-World)
+
+1. Use `git clone --recursive https://github.com/opentok/OpenTok-iOS-Hello-World.git` to obtain the OpenTok-iOS-Hello-World project.
+
+2. Replace the `opentok-ios-sdk` submodule with this repository to add support for WebRTC.
+
+3. Generate an OpenTok Session with p2p enabled and a Token for the session. You can use your Project Tools on the 
+   [Developer Dashboard](https://dashboard.tokbox.com/projects) or a
+   [server-side library](http://www.tokbox.com/opentok/api/tools/documentation/api/server_side_libraries.html).
+
+4. Open the OpenTokHelloWorld project in XCode.
+
+5. Remove armv7s from the Valid Architectures section of the Build Settings for your project.
+
+6. Edit the ViewController.m file in the OpenTokHelloWorld project.
+
+   Change the values of the `kApiKey`, `kSessionId`, and `kToken` constants to match your API key, the peer-to-peer session ID
+   you generated, and the token you generated.
+
+  Change the `subscribeToSelf` variable to be set to `NO`.
+
+7. Select an iOS Device to target from the Scheme chooser in Xcode. Run the application (play button).
+
+8. You will test the app using the `browser_demo.html` file, included in the OpenTokHelloWorld project. Edit the 
+   `browser_demo.html` file:
+
+   Edit the `apiKey`, `sessionId`, and `token` variables to use your API key, the peer-to-peer session ID you generated,
+   and a generated token (for the session).
+
+   Also load the OpenTok WebRTC library in the `script` tag:
+
+   `<script src='http://static.opentok.com/webrtc/v2.0/js/TB.min.js'></script>`
+
+9. Open the `browser_demo.html` file in a web browser and connect to the session. You should now be subscribing
+   in the browser to the stream that is published from the iOS device. You can also publish from the browser and
+   the iOS device should automatically subscribe.
+
+   You can also test the app on two iOS devices (instead of an iOS device and a web browser).
+
+Peer-to-peer Streaming Limitations
+----------------------------------
 
 If you use a session that does not support peer-to-peer streaming, calling `[OTSession connectWithApiKey:token:]`
 results in the `[OTSessionDelegate session:didFailWithError:]` message. The error message is defined by the
@@ -36,57 +92,6 @@ results in the `[OTSessionDelegate session:didFailWithError:]` message. The erro
 You cannot subscribe to a stream published by your own app. If you call `[OTSubscriber initWithStream:delegate:]`
 passing in a stream you publish, the OTSubscriberDelegate sends the `[OTSubscriberDelegate subscriber:didFailWithError:]`
 message. The error message is defined by the `OTSelfSubscribeFailure` enum in the OTError.h file.
-
-Supported devices
------------------
-
-The OpenTok WebRTC for iOS SDK is supported on the following devices:
-
-* iPhone 4S
-* iPhone 5
-* iPad 2
-* iPad 3
-
-The OpenTok WebRTC for iOS SDK is supported on wifi connections.
-
-Hello World test app
---------------------
-
-You can test the OpenTok WebRTC for iOS SDK using the OpenTok-iOS-Hello-World sample, available at GitHub:
-
-<https://github.com/opentok/OpenTok-iOS-Hello-World>
-
-
-1. Use `git clone recursive` to obtain the OpenTok-iOS-Hello-World project.
-2. In the opentok-ios-sdk subdirectory of the project, run `git pull webrtc`.
-3. Generate an OpenTok session that supports peer-to-peer streaming. For example, in the
-[OpenTok Session and Token Generator page](http://www.tokbox.com/opentok/api/tools/generator),
-select "Peer-to-Peer Enabled" as an Advanced Option when creating a session. (You will also
-need to generate a token that support publishing.)
-4. Open the OpenTokHelloWorld project in XCode.
-5. Remove armv7s from the Valid Architectures section of the Build Settings for your project.
-6. Edit the ViewController.m file in the OpenTokHelloWorld project.
-
-    Change the values of the `kApiKey`, `kSessionId`, and `kToken` constants to match your API key, the peer-to-peer session ID
-you generated, and the token you generated.
-
-    Change the `subscribeToSelf` variable to be set to `NO`.
-7. Compile the app using the OpenTok WebRTC for iOS SDK. (Be sure that you have checked out the
-[webrtc branch](https://github.com/opentok/opentok-ios-sdk/tree/webrtc) of the opentok-ios-sdk project,
-so that you are compiling with the WebRTC version of the SDK.)
-8. You will test the app using the browser\_demo.html file, included in the OpenTokHelloWorld project. 
-Edit the browser_demo.html file:
-
-    Edit the `apiKey`, `sessionId`, and `token` variables to use your API key, the peer-to-peer session ID you generated,
-    and a generated token (for the session).
-
-    Also load the OpenTok WebRTC library in the `script` tag:
-
-    `<script src="http://static.opentok.com/v0.92-alpha/js/TB.min.js" type="text/javascript"></script>`
-    
-     (This script tag loads [the OpenTok WebRTC library for web](http://labs.opentok.com/try).)
-9. Open the browser_demo.html file in a web browser and open the iOS app on a supported device.
-10. You can also test the app on two iOS devices (instead of an iOS device and a web browser).
 
 Known Issues
 ------------
