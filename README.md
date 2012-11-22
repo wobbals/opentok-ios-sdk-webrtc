@@ -2,7 +2,10 @@ OpenTok WebRTC for iOS SDK
 ==========================
 
 This SDK lets you use OpenTok on WebRTC video sessions in apps you build for iPad, iPhone, and iPod touch devices.
-This means you can use OpenTok video sessions across iOS devices AND web clients that use OpenTok on
+
+To get started, [sign up for a Developer Account](https://dashboard.tokbox.com/signups/new) and get your API Key.
+
+You can use OpenTok video sessions across iOS devices AND web clients that use OpenTok on
 WebRTC. For details about using this SDK with web clients, see the
 [JavaScript documentation](http://www.tokbox.com/opentok/api/documentation/v2) at the TokBox website.
 
