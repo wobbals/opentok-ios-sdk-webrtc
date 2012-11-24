@@ -41,43 +41,39 @@ The OpenTok WebRTC for iOS SDK is supported on wifi connections.
 OpenTokHello Sample App
 --------------------
 
-You can test the OpenTok WebRTC for iOS SDK using the
-[OpenTok-iOS-Hello-World sample](https://github.com/opentok/OpenTok-iOS-Hello-World)
+You can test the OpenTok WebRTC for iOS SDK using the `webrtc` branch of the
+[OpenTokHello Sample App](https://github.com/opentok/OpenTok-iOS-Hello-World/tree/webrtc)
 
-1. Use `git clone --recursive https://github.com/opentok/OpenTok-iOS-Hello-World.git` to obtain the OpenTok-iOS-Hello-World project.
+1. Use `git clone --recursive -b webrtc https://github.com/opentok/OpenTok-iOS-Hello-World.git` to obtain the 
+   OpenTokHello Sample App project.
 
-2. Replace the `opentok-ios-sdk` submodule with this repository to add support for WebRTC.
-
-3. Generate an OpenTok Session with p2p enabled and a Token for the session. You can use your Project Tools on the 
+2. Generate an OpenTok Session with p2p enabled and a Token for the session. You can use your Project Tools on the 
    [Developer Dashboard](https://dashboard.tokbox.com/projects) or a
    [server-side library](http://www.tokbox.com/opentok/api/tools/documentation/api/server_side_libraries.html).
 
-4. Open the OpenTokHelloWorld project in XCode.
+3. Open the OpenTokHelloWorld project in XCode.
 
-5. Remove armv7s from the Valid Architectures section of the Build Settings for your project.
-
-6. Edit the ViewController.m file in the OpenTokHelloWorld project.
+4. Edit the ViewController.m file in the OpenTokHelloWorld project.
 
    Change the values of the `kApiKey`, `kSessionId`, and `kToken` constants to match your API key, the peer-to-peer session ID
    you generated, and the token you generated.
 
-  Change the `subscribeToSelf` variable to be set to `NO`.
+5. Select an iOS Device to target from the Scheme chooser in Xcode. Run the application (play button).
 
-7. Select an iOS Device to target from the Scheme chooser in Xcode. Run the application (play button).
-
-8. You will test the app using the `browser_demo.html` file, included in the OpenTokHelloWorld project. Edit the 
+6. You will test the app using the `browser_demo.html` file, included in the OpenTokHelloWorld project. Edit the 
    `browser_demo.html` file:
 
    Edit the `apiKey`, `sessionId`, and `token` variables to use your API key, the peer-to-peer session ID you generated,
    and a generated token (for the session).
 
-   Also load the OpenTok WebRTC library in the `script` tag:
-
-   `<script src='http://static.opentok.com/webrtc/v2.0/js/TB.min.js'></script>`
-
-9. Open the `browser_demo.html` file in a web browser and connect to the session. You should now be subscribing
+7. Open the `browser_demo.html` file in a web browser and connect to the session. You should now be subscribing
    in the browser to the stream that is published from the iOS device. You can also publish from the browser and
    the iOS device should automatically subscribe.
+
+   ***Note:*** You will not be able to subscribe properly if opening `browser_demo.html` from the `file:///` URL Scheme.
+   One quick way to start an HTTP server from the Terminal is to run
+   `open http://localhost:8000/browser_demo.html && python -m SimpleHTTPServer` on command line from the project directory.
+   This will start a server on port 8000 and open a new window with the right URL loaded.
 
    You can also test the app on two iOS devices (instead of an iOS device and a web browser).
 
