@@ -114,7 +114,8 @@ typedef enum {
 
 /**
  * Once your application has a valid [token](http://www.tokbox.com/opentok/api/tools/js/documentation/overview/token%5Fcreation.html),
- * connect with your [API key](http://www.tokbox.com/opentok/api/tools/js/apikey) to begin participating in an OpenTok session.
+ * connect with your API key to begin participating in an OpenTok session. You get an API key when you
+ * [sign up](https://dashboard-dev.tokbox.com/users/sign_in) for an OpenTok account.
  *
  * When the session connects successfully, the <[OTSessionDelegate sessionDidConnect:]> message is sent to
  * the session's delegate.
@@ -133,7 +134,7 @@ typedef enum {
  * with the OpenTok infrastructure.
  *
  * @param apiKey Your OpenTok API key.
- * @param token The token generated for this connection.
+ * @param token The [token](http://www.tokbox.com/opentok/api/tools/js/documentation/overview/token%5Fcreation.html) generated for this connection.
  */
 - (void)connectWithApiKey:(NSString*)apiKey
                     token:(NSString*)token;
