@@ -40,7 +40,7 @@ typedef enum {
  * an OTSession object with a valid
  * [session ID](http://www.tokbox.com/opentok/api/tools/js/documentation/overview/session%5Fcreation.html). 
  * Use the OTSession object to connect to OpenTok using your developer
- * [API key](http://www.tokbox.com/opentok/api/tools/js/apikey) and a valid
+ * [API key](https://dashboard-dev.tokbox.com) and a valid
  * [token](http://www.tokbox.com/opentok/api/tools/js/documentation/overview/token%5Fcreation.html).
  */
 @interface OTSession : NSObject
