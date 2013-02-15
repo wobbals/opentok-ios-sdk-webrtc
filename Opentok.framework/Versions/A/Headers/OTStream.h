@@ -74,7 +74,7 @@
 
 /**
  * The current dimensions of the video media track on this stream. This property can change if a stream published from an
- * iOS device resizes, based on a change in the device orientation. When this occurs, the [OTSubscriberDelegate stream:didChangeVideoDimensions:] 
+ * iOS device resizes, based on a change in the device orientation. When this occurs, the <[OTSubscriberDelegate stream:didChangeVideoDimensions:]> 
  * message is sent (for an OTSubscriber subscribing to the stream).
  *
  * This property is available for WebRTC only.
