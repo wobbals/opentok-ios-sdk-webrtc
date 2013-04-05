@@ -21,9 +21,9 @@
  * message.
  *
  * The OpenTok iOS SDK supports publishing on all devices, except the iPhone 3GS.
- * (Only subscribing is supported on the iPhone 3GS.) For a list of supported devices,
- * see "Developer and client requirements" in [Using the OpenTok iOS
- * SDK](http://www.tokbox.com/opentok/ios/docs/docs/Using_iOS.html).
+ * see "Developer and client requirements" in the README file for
+ * [the OpenTok iOS SDK](https://github.com/opentok/opentok-ios-sdk) or for
+ * [the OpenTok on WebRTC iOS SDK](https://github.com/opentok/opentok-ios-sdk-webrtc).
  */
 @interface OTPublisher : NSObject 
 
