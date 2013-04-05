@@ -22,9 +22,8 @@
  *
  * The OpenTok iOS SDK supports publishing on all devices, except the iPhone 3GS.
  * (Only subscribing is supported on the iPhone 3GS.) For a list of supported devices,
- * see "Developer and client requirements" in the README file for
- * [the OpenTok iOS SDK](https://github.com/opentok/opentok-ios-sdk) or for
- * [the OpenTok on WebRTC iOS SDK](https://github.com/opentok/opentok-ios-sdk-webrtc).
+ * see "Developer and client requirements" in [Using the OpenTok iOS
+ * SDK](http://www.tokbox.com/opentok/ios/docs/docs/Using_iOS.html).
  */
 @interface OTPublisher : NSObject 
 
@@ -128,7 +127,7 @@
  * @param error The error (an <OTError> object). The `OTPublisherErrorCode` enum (defined in the OTError class)
  * defines values for the `code` property of this object.
  */
-- (void)publisher:(OTPublisher*)publisher didFailWithError:(OTError*) error;
+- (void)publisher:(OTPublisher*)publisher didFailWithError:(OTError*)error;
 
 @optional
 
@@ -145,5 +144,11 @@
  * @param publisher The publisher that signalled this event.
  */
 -(void)publisherDidStopStreaming:(OTPublisher*)publisher;
+
+/**
+ * Sent when the camera device is changed.
+ * @prarm publisher The publisher that signalled this event.
+ */
+-(void)publisherDidChange:(OTPublisher*)publisher cameraPosition:(AVCaptureDevicePosition)position;
 
 @end
