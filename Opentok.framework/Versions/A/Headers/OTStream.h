@@ -27,7 +27,7 @@
  * You can compare this to to the <[OTSession connection]> property to see if the stream
  * is being published by the local device.
  */
-@property(readonly) OTConnection* connection;
+@property(readonly, strong) OTConnection* connection;
 
 /**
  * The session (an <OTSession> object) the stream is bound to.
@@ -37,7 +37,7 @@
 /**
  * The unique ID of the stream.
  */
-@property(readonly) NSString* streamId;
+@property(readonly, strong) NSString* streamId;
 
 /**
  * The type of the stream. This value can be `"basic"` or `"archive"`.
@@ -50,7 +50,7 @@
 /**
  * The timestamp for the creation of the stream on the OpenTok media server.
  */
-@property(readonly) NSDate *creationTime;
+@property(readonly, strong) NSDate *creationTime;
 
 /**
  * The name of the stream. In the OpenTok iOS SDK, you can specify a published stream's name
@@ -74,7 +74,7 @@
 
 /**
  * The current dimensions of the video media track on this stream. This property can change if a stream published from an
- * iOS device resizes, based on a change in the device orientation. When this occurs, the <[OTSubscriberDelegate stream:didChangeVideoDimensions:]> 
+ * iOS device resizes, based on a change in the device orientation. When this occurs, the [OTSubscriberDelegate stream:didChangeVideoDimensions:] 
  * message is sent (for an OTSubscriber subscribing to the stream).
  *
  * This property is available for WebRTC only.
