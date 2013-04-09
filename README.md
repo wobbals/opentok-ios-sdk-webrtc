@@ -43,7 +43,7 @@ Release notes
 
 April 5, 2013
 
-* This is version 2.3 of the OpenTok on WebRTC iOS SDK.
+* This is version 2.1 of the OpenTok on WebRTC iOS SDK.
 * You can now specify the camera a publisher uses by setting the `[OTPublisher cameraPosition]` property. The OTPublisherDelegate sends
 the `[OTPublisherDelegate publisherDidChange:cameraPosition:]` message in response to a camera change.
 * Publishers and subscribers now continue to publish and subscribe to streams when running in the background.
