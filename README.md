@@ -1,5 +1,5 @@
-OpenTok WebRTC for iOS SDK
-==========================
+OpenTok WebRTC on iOS SDK
+=========================
 
 This SDK lets you use OpenTok on WebRTC video sessions in apps you build for iPad, iPhone, and iPod touch devices.
 
@@ -9,12 +9,12 @@ You can use OpenTok video sessions across iOS devices AND web clients that use O
 WebRTC. For details about using this SDK with web clients, see the
 [JavaScript documentation](http://www.tokbox.com/opentok/webrtc/docs/js/reference/index.html) at the TokBox website.
 
-Using the OpenTok WebRTC for iOS SDK
-------------------------------------
+Using the OpenTok on WebRTC iOS SDK
+-----------------------------------
 
 See the [reference documentation for the OpenTok iOS SDK](http://www.tokbox.com/opentok/ios/docs/index.html).
 
-There are two important differences to keep in mind when working with the OpenTok WebRTC for iOS SDK (compared with
+There are two important differences to keep in mind when working with the OpenTok on WebRTC iOS SDK (compared with
 the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the OpenTok iOS SDK):
 
 *  You must use a [peer-to-peer streaming](http://www.tokbox.com/opentok/docs/concepts/peer_to_peer.html)
@@ -25,18 +25,30 @@ the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the Open
    Peer-to-peer streaming helps reduce latency by letting the media stream skip a hop to an external server,
    resulting in better performance. A few limitations introduced by this technique are discussed below.
 
-*  At this time you cannot run your application in the iOS Simulator, just run it on your device for testing. We will
+*  At this time you cannot run your application in the iOS Simulator. Just run it on your device for testing. We will
    be addressing this in a future release.
 
 Supported devices
 -----------------
 
-The OpenTok WebRTC for iOS SDK is supported on the following devices:
+The OpenTok on WebRTC iOS SDK is supported on the following devices:
 
 * iPhone 4S / 5
 * iPad 2 / 3 / 4 / mini
 
-The OpenTok WebRTC for iOS SDK is supported on wifi connections.
+The OpenTok on WebRTC iOS SDK is supported on wifi connections.
+
+Release notes
+-------------
+
+April 5, 2013
+
+* This is version 2.3 of the OpenTok on WebRTC iOS SDK.
+* You can now specify the camera a publisher uses by setting the `[OTPublisher cameraPosition]` property. The OTPublisherDelegate sends
+the `[OTPublisherDelegate publisherDidChange:cameraPosition:]` message in response to a camera change.
+* Publishers and subscribers now continue to publish and subscribe to streams when running in the background.
+* This release improves connectivity between WebRTC clients.
+* This release includes bug fixes to improve performance and stability.
 
 
 Known issues
@@ -49,6 +61,8 @@ Known issues
 * Our graphics rendering pipeline causes this error to be logged when debugging: "CGContextDrawImage: invalid context 0x0." This should not affect the performance of your app. If you experience video quality issues, please let us know.
 
 * You cannot target the iOS Simulator. Build and deploy to a supported iOS device.
+
+* iOS 6.1.3 seems to have some issues when the OpenTok on WebRTC library is running in the background. We are investigating this.
 
 In XCode, you need to remove armv7s from the Valid Architectures section of the Build Settings for your project.
 
