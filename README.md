@@ -62,6 +62,8 @@ Known issues
 
 * Some features available in the OpenTok SDK for other platforms (such as JavaScript) are not supported in the OpenTok iOS SDK. These unsupported features include peer-to-peer streaming and archiving.
 
+* The `[OTSubscriber subscribeToAudio]` and `[OTSubscriber subscribeToVideo]` messages are currently unsupported.
+
 * The OpenTok iOS SDK supports iOS 5 and later only.
 
 * Our graphics rendering pipeline causes this error to be logged when debugging: "CGContextDrawImage: invalid context 0x0." This should not affect the performance of your app. If you experience video quality issues, please let us know.
