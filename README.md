@@ -41,6 +41,14 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+April 24, 2013
+
+*  OpenTok on WebRTC now provides increased connectivity. WebRTC is a peer-to-peer protocol that does not work on some
+restricted networks. Many environments, especially cellular and corporate networks, have strict network policies that
+prevent WebRTC apps from working. OpenTok on WebRTC now overcomes these restrictions to connect clients, even in
+environments that have NAT-style firewalls. However, an app cannot use WebRTC if UDP is completely blocked on the
+network.
+
 April 9, 2013
 
 * This is version 2.1.1 of the OpenTok iOS SDK.
