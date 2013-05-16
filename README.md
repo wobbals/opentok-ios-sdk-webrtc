@@ -41,6 +41,13 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+May 16, 2013 - Version 2.1.2
+
+* Support for Mantis, the OpenTok media server for WebRTC.
+* Fixed some issues that were occuring when the OpenTok library ran in the background.
+* Added native support for armv7s architecture.
+* Fixed a bug that causes inconsistent UI when manipulating media track functions (eg. publishVideo, subscribeToAudio, etc.)
+
 April 24, 2013
 
 *  OpenTok on WebRTC now provides increased connectivity. WebRTC is a peer-to-peer protocol that does not work on some
@@ -119,10 +126,10 @@ The OpenTokHelloWorld app publishes to a demo session, and subscribes to its own
 your own apps:
 
 * **Opentok.framework** -- Add this framework to your project. Note that to use the library you must also 
-include the Opentok.bundle file and the headers included in in the Frameworks directory of the OpenTokHelloWorld
+include the opentok.bundle file and the headers included in in the Frameworks directory of the OpenTokHelloWorld
 sample app.
 
-* **Opentok.bundle** -- Add the Opentok.bundle file to your project. The Opentok.bundle file is located
+* **opentok.bundle** -- Add the opentok.bundle file to your project. The opentok.bundle file is located
 in the Opentok.framework/Versions/A/Resources subdirectory of the OpenTok iOS SDK. 
 
 * **Frameworks directory** -- The OpenTok iOS library uses linked frameworks and dynamic libraries provided by iOS.
@@ -159,9 +166,9 @@ Here are the basic steps in creating your own app:
 
 3. Drag the Opentok.framework directory from the Mac OS Finder to the Frameworks directory for for your project in XCode.
 
-4. Drag the Opentok.bundle file from the Mac OS Finder to root directory for your project in XCode.
+4. Drag the opentok.bundle file from the Mac OS Finder to root directory for your project in XCode.
 
-	The Opentok.bundle file is located in the Opentok.framework/Versions/A/Resources subdirectory of the OpenTok iOS SDK.
+	The opentok.bundle file is located in the Opentok.framework/Versions/A/Resources subdirectory of the OpenTok iOS SDK.
 
 
 5. The OpenTok framework requires a few other frameworks and libraries to be added to your project. The easiest way to add them is
