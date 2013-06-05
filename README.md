@@ -87,8 +87,6 @@ Known issues
 
 * iOS 6.1.3 seems to have some issues when the OpenTok on WebRTC library is running in the background. We are investigating this.
 
-In XCode, you need to remove armv7s from the Valid Architectures section of the Build Settings for your project.
-
 Peer-to-peer Streaming Limitations
 ----------------------------------
 
@@ -181,7 +179,12 @@ to copy them from the OpenTokHello sample app.
 	CoreAudio.framework, CoreMedia.framework, CoreTelephony.framework, CoreVideo.framework, libz.dylib, libstdc++.dylib, MobileCoreServices.framework,
 	OpenGLES.framework, QuartzCore.framework, Security.framework, SystemConfiguration.framework.
 	
-6. Remove armv7s from the Valid Architectures section of the Build Settings for your project.
+6. When running in the background, the OpenTok SDK requires certain Info.pList settings to continue publishing and subscribing to
+audio video streams. In XCode, open Info tab for your app's target and add a Required Background Modes entry (if it does not already
+exist). Add the following to the list of required background modes:
+
+	- App plays audio
+	- App provides Voice over IP services
 
 Next steps:
 
