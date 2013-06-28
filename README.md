@@ -41,6 +41,13 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+July 1, 2013 - Version 2.1.3
+
+* Fixed an issue preventing [OTVideoView getImageWithBlock:] from working correctly
+* Added support for peer-to-peer sessions connecting to Firefox 22
+* Fixed some reported crashes
+* Fixed an issue with subscriber video quality introduced in 2.1.2
+
 May 16, 2013 - Version 2.1.2
 
 * Support for Mantis, the OpenTok media server for WebRTC.
