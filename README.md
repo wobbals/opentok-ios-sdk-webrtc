@@ -41,6 +41,12 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+July 3, 2013 - Version 2.1.3
+
+* Improves stability in OpenTok sessions that use [Mantis](http://www.tokbox.com/blog/mantis-next-generation-cloud-technology-for-webrtc/).
+* Fixes crashing issues.
+* Includes other changes to improve performance and stability.
+
 May 16, 2013 - Version 2.1.2
 
 * Support for Mantis, the OpenTok media server for WebRTC.
