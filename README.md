@@ -14,7 +14,7 @@ Using the OpenTok on WebRTC iOS SDK
 
 See the [reference documentation for the OpenTok iOS SDK](http://www.tokbox.com/opentok/ios/docs/index.html).
 
-There are two important differences to keep in mind when working with the OpenTok on WebRTC iOS SDK (compared with
+There are important differences to keep in mind when working with the OpenTok on WebRTC iOS SDK (compared with
 the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the OpenTok iOS SDK):
 
 *  With the latest release of the OpenTok on WebRTC iOS SDK, multipoint face-to-face video sessions are now possible. 
