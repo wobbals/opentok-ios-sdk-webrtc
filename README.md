@@ -14,8 +14,13 @@ Using the OpenTok on WebRTC iOS SDK
 
 See the [reference documentation for the OpenTok iOS SDK](http://www.tokbox.com/opentok/ios/docs/index.html).
 
-There are two important differences to keep in mind when working with the OpenTok on WebRTC iOS SDK (compared with
+There are important differences to keep in mind when working with the OpenTok on WebRTC iOS SDK (compared with
 the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the OpenTok iOS SDK):
+
+*  With the latest release of the OpenTok on WebRTC iOS SDK, multipoint face-to-face video sessions are now possible. 
+   To enable, multipoint face-to-face video sessions please email mantis@tokbox.com and include your API key and use case. 
+   You can continue to use peer-to-peer video calling by enabling peer-to-peer sessions using your server-side library.
+
 
 *  You must use a [peer-to-peer streaming](http://www.tokbox.com/opentok/docs/concepts/peer_to_peer.html)
    enabled OpenTok Session. You can enable p2p when creating a session using the Project Tools on your
@@ -35,6 +40,11 @@ The OpenTok on WebRTC iOS SDK is supported on the following devices:
 
 * iPhone 4S / 5
 * iPad 2 / 3 / 4 / mini
+
+Web browsers supported:
+
+* Google Chrome, Google Chrome Beta
+* Mozilla Firefox 22+
 
 The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 
