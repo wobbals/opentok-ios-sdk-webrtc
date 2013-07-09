@@ -53,9 +53,10 @@ Release notes
 
 July 3, 2013 - Version 2.1.3
 
-* Improves stability in OpenTok sessions that use [Mantis](http://www.tokbox.com/blog/mantis-next-generation-cloud-technology-for-webrtc/).
-* Fixes crashing issues.
-* Includes other changes to improve performance and stability.
+* Fixed an issue preventing [OTVideoView getImageWithBlock:] from working correctly
+* Added support for peer-to-peer sessions connecting with Firefox 22
+* Fixed some reported crashes
+* Fixed an issue with subscriber video quality introduced in 2.1.2
 
 May 16, 2013 - Version 2.1.2
 
