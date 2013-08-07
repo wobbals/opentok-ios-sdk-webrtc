@@ -51,6 +51,17 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+August 7, 2013 - Version 2.1.4
+
+* Dynamic traffic shaping -- In non-peer-to peer sessions, OpenTok now dynamically
+shapes audio and video to maximize the experience for every participant in a multi-point conversation. For more information,
+see our [blog](http://www.tokbox.com/blog/quality-of-experience-and-traffic-shaping-the-next-step-with-mantis/).
+In a non-peer-to peer session, setting `[OTSubscriber subscribeToAudio]` or `[OTSubscriber subscribeToAudio]` to `NO`
+reduces the bandwidth consumed by the app. (The app does only receives audio and video streams that it subscribes to.)
+* The `[OTSubscriber subscribeToAudio]` and `[OTSubscriber subscribeToVideo]` messages are now supported. 
+* Background support improvements -- This version fixes some issues related to apps running in the background
+* Other improvements -- This version includes other fixes for performance and stability.
+
 July 3, 2013 - Version 2.1.3
 
 * Fixed an issue preventing [OTVideoView getImageWithBlock:] from working correctly
@@ -60,10 +71,10 @@ July 3, 2013 - Version 2.1.3
 
 May 16, 2013 - Version 2.1.2
 
-* Support for Mantis, the OpenTok media server for WebRTC.
-* Fixed some issues that were occuring when the OpenTok library ran in the background.
+* Support for non-peer-to-peer sessions, using the OpenTok media server for WebRTC.
+* Fixed some issues that were occurring when the OpenTok library ran in the background.
 * Added native support for armv7s architecture.
-* Fixed a bug that causes inconsistent UI when manipulating media track functions (eg. publishVideo, subscribeToAudio, etc.)
+* Fixed a bug that causes inconsistent UI when manipulating media track functions (e.g. publishVideo, subscribeToAudio, etc.)
 
 April 24, 2013
 
@@ -94,15 +105,11 @@ Known issues
 
 * Some features available in the OpenTok SDK for other platforms (such as JavaScript) are not supported in the OpenTok iOS SDK. These unsupported features include peer-to-peer streaming and archiving.
 
-* The `[OTSubscriber subscribeToAudio]` and `[OTSubscriber subscribeToVideo]` messages are currently unsupported.
-
 * The OpenTok iOS SDK supports iOS 5 and later only.
 
 * Our graphics rendering pipeline causes this error to be logged when debugging: "CGContextDrawImage: invalid context 0x0." This should not affect the performance of your app. If you experience video quality issues, please let us know.
 
 * You cannot target the iOS Simulator. Build and deploy to a supported iOS device.
-
-* iOS 6.1.3 seems to have some issues when the OpenTok on WebRTC library is running in the background. We are investigating this.
 
 Peer-to-peer Streaming Limitations
 ----------------------------------
