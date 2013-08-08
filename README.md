@@ -25,7 +25,7 @@ the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the Open
 *  You must use a [peer-to-peer streaming](http://www.tokbox.com/opentok/docs/concepts/peer_to_peer.html)
    enabled OpenTok Session. You can enable p2p when creating a session using the Project Tools on your
    [Developer Dashboard](https://dashboard.tokbox.com/projects) or enable it for any Session created with
-   our supported [server-side libraries](http://www.tokbox.com/opentok/docs/concepts/server_side_libraries.html).
+   our supported [server-side libraries](http://tokbox.com/opentok/docs/server/server_side_libraries.html).
 
    Peer-to-peer streaming helps reduce latency by letting the media stream skip a hop to an external server,
    resulting in better performance. A few limitations introduced by this technique are discussed below.
