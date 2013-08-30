@@ -54,7 +54,7 @@ Release notes
 August 30, 2013 - Version 2.1.5
 
 * New signaling API -- This version adds support for the new OpenTok signaling API. 
-  You can now send messages and data to other clients connected to an OpenTok session. 
+  You can now send messages with data to other clients connected to the OpenTok session you are connected to. 
   See the [OTSession signalWithType:data:completionHandler:],
   [OTSession signalWithType:data:connections:completionHandler:], 
   and [OTSession receiveSignalType:withHandler:] methods.
