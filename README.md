@@ -51,6 +51,22 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+August 30, 2013 - Version 2.1.5
+
+* New signaling API -- This version adds support for the new OpenTok signaling API. 
+  You can now send messages and data to other clients connected to an OpenTok session. 
+  See the [OTSession signalWithType:data:completionHandler:],
+  [OTSession signalWithType:data:connections:completionHandler:], 
+  and [OTSession receiveSignalType:withHandler:] methods.
+* Dynamic traffic shaping -- [OTSubscriberDelegate subscriberVideoDisabled:] 
+  is invoked when the OpenTok media server stops sending video to a subscriber. 
+  This feature of the OpenTok media server has a subscriber drop the video stream when
+   connectivity degrades. The subscriber continues to receive the audio stream, if there is one.
+* New connection events -- [OTSessionDelegate session:didCreateConnection:] and
+  [OTSessionDelegate session:didDropConnection:] are invoked when clients connect to and disconnect from a session.
+* iOS 7 Support -- This version resolves several iOS 7 compatability issues. Note that iOS 7 introduces a system-level
+  end-user prompt for microphone access.
+
 August 7, 2013 - Version 2.1.4
 
 * Dynamic traffic shaping -- In non-peer-to peer sessions, OpenTok now dynamically
