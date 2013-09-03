@@ -7,12 +7,12 @@ To get started, [sign up for a Developer Account](https://dashboard.tokbox.com/s
 
 You can use OpenTok video sessions across iOS devices AND web clients that use OpenTok on
 WebRTC. For details about using this SDK with web clients, see the
-[JavaScript documentation](http://www.tokbox.com/opentok/webrtc/docs/js/reference/index.html) at the TokBox website.
+[JavaScript documentation](http://tokbox.com/opentok/libraries/client/js/) at the TokBox website.
 
 Using the OpenTok on WebRTC iOS SDK
 -----------------------------------
 
-See the [reference documentation for the OpenTok iOS SDK](http://www.tokbox.com/opentok/ios/docs/index.html).
+See the [reference documentation for the OpenTok iOS SDK](http://tokbox.com/opentok/libraries/client/ios/).
 
 There are important differences to keep in mind when working with the OpenTok on WebRTC iOS SDK (compared with
 the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the OpenTok iOS SDK):
@@ -25,7 +25,7 @@ the [non-WebRTC version](https://github.com/opentok/opentok-ios-sdk) of the Open
 *  You must use a [peer-to-peer streaming](http://www.tokbox.com/opentok/docs/concepts/peer_to_peer.html)
    enabled OpenTok Session. You can enable p2p when creating a session using the Project Tools on your
    [Developer Dashboard](https://dashboard.tokbox.com/projects) or enable it for any Session created with
-   our supported [server-side libraries](http://tokbox.com/opentok/docs/server/server_side_libraries.html).
+   our supported [server-side libraries](http://tokbox.com/opentok/libraries/server/).
 
    Peer-to-peer streaming helps reduce latency by letting the media stream skip a hop to an external server,
    resulting in better performance. A few limitations introduced by this technique are discussed below.
@@ -174,7 +174,7 @@ in the Opentok.framework/Versions/A/Resources subdirectory of the OpenTok iOS SD
 We cannot pre-link them in the OpenTok framework, so your project must link them. Expand the "Frameworks" directory
 of the sample application in XCode project browser. Drag and drop the contents of this directory into your own iOS project.
 
-You can connect to the same OpenTok session that the OpenTokHello sample app uses by going to http://www.tokbox.com/opentok/webrtc/docs/js/tutorials/helloworld.html. You can generate a new session ID at this URL:
+You can generate a new session ID at this URL:
 
 https://dashboard.tokbox.com/projects
 
