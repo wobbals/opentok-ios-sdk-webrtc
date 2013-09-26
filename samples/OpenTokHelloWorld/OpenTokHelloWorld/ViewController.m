@@ -34,6 +34,10 @@ static bool subscribeToSelf = YES; // Change to NO to subscribe to streams other
     [self doConnect];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
