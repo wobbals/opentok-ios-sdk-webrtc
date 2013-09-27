@@ -1,5 +1,5 @@
-OpenTok WebRTC Client SDK for iOS release notes
-===============================================
+OpenTok 2.0 iOS Client SDK release notes
+========================================
 
 Revision history
 ----------------
