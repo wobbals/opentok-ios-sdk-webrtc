@@ -80,6 +80,12 @@ Known issues
 
 * You cannot target the iOS Simulator. Build and deploy to a supported iOS device.
 
+* The OpenTok iOS SDK includes echo suppression for subscriber and publisher streams in the same app. However, you
+may experience echoes when testing an app on two iOS devices *in the same room or in close proximity* (or on one
+iOS device and in a nearby web browser using the OpenTok JavaScript client library). In this test scenario, mute
+the audio in one of the devices (or the web browser) or use headphones.
+
+
 Peer-to-peer streaming Limitations
 ----------------------------------
 
