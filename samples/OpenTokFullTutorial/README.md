@@ -31,11 +31,11 @@ Testing the sample app
     uses the OpenTok media server -- do not create a peer-to-peer session. (You cannot subscribe to your own stream
     in a peer-to-peer session.)
 
-    Open `ViewController.h` and modify `kApiKey`, `kSessionId`, and `kToken` with your own API Key, Session ID, and Token,
+    Open `ViewController.h` and modify `kApiKey`, `kSessionId`, and `kToken` with your own API key, session ID, and token,
     respectively. 
 
-    Edit `browser_demo.html` and modify the variables `apiKey`, `sessionId`, and `token` with your own API Key, Session ID,
-    and Token, respectively.
+    Edit the browser_demo.html file and modify the variables `apiKey`, `sessionId`, and `token` with the API key,
+    session ID, and token, respectively.
 
 4. Select the XCode Organizer (Window > Organizer), and make sure that your device is provisioned to work with the sample app. For more information,
 see the section on "Setting up your development environment" at [this page](https://developer.apple.com/programs/ios/gettingstarted/) at
@@ -61,8 +61,11 @@ the Apple iOS Dev Center.
 
 			static bool subscribeToSelf = NO;
 	- Run the app on your iOS device again.
-	- In a browser on your Mac, load the browser_demo.html file, included with the sample app, to add more streams to the session. 
-	In the web page, click the Connect and Publish buttons.
+	- Add the browser_demo.html file onto a web server.
+	- Mute the audio on your Mac. Then a browser on your Mac, load the browser_demo.html file from the web server. 
+	(The OpenTok iOS SDK includes echo suppression for subscriber and publisher streams in the same app. However,
+	you may experience echoes when testing an app on an iOS device and in a nearby web browser.)
+	- In the web page, click the Connect and Publish buttons.
 
 Understanding the code
 ----------------------
