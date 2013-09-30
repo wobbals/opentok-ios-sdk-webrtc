@@ -106,6 +106,9 @@ to copy them from the OpenTokHello sample app.
 	CoreAudio.framework, CoreMedia.framework, CoreTelephony.framework, CoreVideo.framework, libz.dylib, libstdc++.dylib, MobileCoreServices.framework,
 	OpenGLES.framework, QuartzCore.framework, Security.framework, SystemConfiguration.framework.
 	
+	**Note:** If you started from a blank project template in Xcode 5, you will need to set the iOS Deployment Target (IPHONEOS_DEPLOYMENT_TARGET) build setting to 6.1.
+	Otherwise, you may have linking errors when you compile. This issue will be addressed in a future release.
+	
 6. When running in the background, the OpenTok SDK requires certain Info.pList settings to continue publishing and subscribing to
 audio video streams. In XCode, open Info tab for your app's target and add a Required Background Modes entry (if it does not already
 exist). Add the following to the list of required background modes:
