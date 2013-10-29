@@ -4,6 +4,11 @@ OpenTok 2.0 iOS Client SDK release notes
 Revision history
 ----------------
 
+October 28, 2013 - Version 2.1.6
+
+* This version fixes issues with video orientation changes.
+* The property OTConnection.data is available, which uses data specified during token creation.
+
 August 30, 2013 - Version 2.1.5
 
 * New signaling API -- This version adds support for the new OpenTok signaling API. 
@@ -71,6 +76,9 @@ the `[OTPublisherDelegate publisherDidChange:cameraPosition:]` message in respon
 
 Known issues
 ------------
+* If you started from a blank project template in Xcode 5, you will need to set the iOS Deployment Target
+(IPHONEOS_DEPLOYMENT_TARGET) build setting to 6.1. Otherwise, you may have linking errors when
+you compile. This issue will be addressed in a future release.
 
 * Some features available in the OpenTok SDK for other platforms (such as JavaScript) are not supported in the OpenTok iOS SDK. These unsupported features include peer-to-peer streaming and archiving.
 
