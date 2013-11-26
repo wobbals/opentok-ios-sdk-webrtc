@@ -4,6 +4,14 @@ OpenTok 2.0 iOS Client SDK release notes
 Revision history
 ----------------
 
+November 25, 2013 - Version 2.1.7
+
+* This version fixes peer-to-peer publishing and subscribing issues between iOS and Chrome.
+* This version fixes memory leaks in OpenGL rendering.
+* This version fixes issues when disconnecting from a session.
+* OpenTok support for [TURN over TCP](http://www.tokbox.com/blog/opentok-now-supports-turn-over-tcp)
+  is not currently available in iOS.
+
 October 28, 2013 - Version 2.1.6
 
 * This version fixes issues with video orientation changes.
@@ -92,6 +100,9 @@ you compile. This issue will be addressed in a future release.
 may experience echoes when testing an app on two iOS devices *in the same room or in close proximity* (or on one
 iOS device and in a nearby web browser using the OpenTok JavaScript client library). In this test scenario, mute
 the audio in one of the devices (or the web browser) or use headphones.
+
+* OpenTok support for [TURN over TCP](http://www.tokbox.com/blog/opentok-now-supports-turn-over-tcp)
+is not currently available in iOS.
 
 
 Peer-to-peer streaming Limitations
