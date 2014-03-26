@@ -1,4 +1,4 @@
-OpenTok 2.0 iOS Client SDK
+OpenTok 2.0 iOS SDK
 ==========================
 
 The OpenTok 2.0 iOS SDK lets you use OpenTok on WebRTC video sessions in apps you build for iPad, iPhone, and
@@ -6,9 +6,14 @@ iPod touch devices.
 
 To get started, [sign up for a developer account](https://dashboard.tokbox.com/signups/new) and get your API Key.
 
-You can use OpenTok video sessions across iOS devices AND web clients that use OpenTok 2.0 (OpenTok on WebRTC).
+Apps written with the OpenTok 2.0 iOS SDK can interact with OpenTok apps written with the following OpenTok SDKs:
+
+* OpenTok.js 2.0
+* OpenTok.js 2.2
+* OpenTok 2.0 Android SDK Beta
+
 For details about using this SDK with web clients, see the
-[JavaScript documentation](http://tokbox.com/opentok/libraries/client/js/) at the TokBox website.
+[OpenTok.js documentation](http://tokbox.com/opentok/libraries/client/js/) at the TokBox website.
 
 Using the OpenTok 2.0 iOS SDK
 -----------------------------
