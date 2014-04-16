@@ -10,7 +10,7 @@ Apps written with the OpenTok 2.0 iOS SDK can interact with OpenTok apps written
 
 * OpenTok.js 2.0
 * OpenTok.js 2.2
-* OpenTok 2.0 Android SDK Beta
+* OpenTok Android SDK 2.2 Beta
 
 For details about using this SDK with web clients, see the
 [OpenTok.js documentation](http://tokbox.com/opentok/libraries/client/js/) at the TokBox website.
@@ -29,7 +29,8 @@ Supported devices
 The OpenTok 2.0 iOS SDK is supported on the following devices:
 
 * iPhone 4S / 5
-* iPad 2 / 3 / 4 / mini
+* iPod Touch 5+
+* iPad 2 / 3 / 4 / Mini
 
 Web browsers supported:
 
