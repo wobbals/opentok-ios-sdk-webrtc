@@ -6,15 +6,6 @@ iPod touch devices.
 
 To get started, [sign up for a developer account](https://dashboard.tokbox.com/signups/new) and get your API Key.
 
-Apps written with the OpenTok 2.0 iOS SDK can interact with OpenTok apps written with the following OpenTok SDKs:
-
-* OpenTok.js 2.0
-* OpenTok.js 2.2
-* OpenTok Android SDK 2.2 Beta
-
-For details about using this SDK with web clients, see the
-[OpenTok.js documentation](http://tokbox.com/opentok/libraries/client/js/) at the TokBox website.
-
 Using the OpenTok 2.0 iOS SDK
 -----------------------------
 
@@ -32,12 +23,16 @@ The OpenTok 2.0 iOS SDK is supported on the following devices:
 * iPod Touch 5+
 * iPad 2 / 3 / 4 / Mini
 
-Web browsers supported:
-
-* Google Chrome, Google Chrome Beta
-* Mozilla Firefox 22+
-
 The OpenTok 2.0 iOS SDK is supported on wifi connections.
+
+Platform compatibility
+----------------------
+
+Apps written with the OpenTok 2.0 iOS SDK can interact with OpenTok apps written with the following OpenTok SDKs:
+
+* OpenTok.js 2.0
+* OpenTok.js 2.2
+* OpenTok Android SDK 2.2 Beta
 
 Developer and client requirements
 ---------------------------------
